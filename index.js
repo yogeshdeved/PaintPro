@@ -32,6 +32,6 @@ app.use("/api/v1/producttype",productTypeRoute);
 app.use("/api/v1/category",categoryRoute);
 app.use("/api/v1/banner",bannerRoute);
 
-app.listen(process.env.PORT_NO || 5000,()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log("Backend is running");
 })
