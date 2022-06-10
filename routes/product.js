@@ -12,7 +12,7 @@ router.get("/",async (req,res)=>{
         res.status(500,json({message:error}))
     }
 })
-router.get("/products/:cid",async (req,res)=>{
+router.get("/products",async (req,res)=>{
     try
     {
     const dbr = await product.find();
