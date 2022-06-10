@@ -15,7 +15,7 @@ router.get("/",async (req,res)=>{
 router.get("/products/:cid",async (req,res)=>{
     try
     {
-    const dbr = await product.find("category.id": req.params["cid"]});
+    const dbr = await product.find(category.id: req.params["cid"]});
     res.status(200).json(dbr);
     }
     catch(error)
