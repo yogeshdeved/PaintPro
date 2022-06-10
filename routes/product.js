@@ -12,6 +12,17 @@ router.get("/",async (req,res)=>{
         res.status(500,json({message:error}))
     }
 })
+router.get("/products/:cid",async (req,res)=>{
+    try
+    {
+    const dbr = await product.find(p => p.category.id == req.param.cid);
+    res.status(200).json(dbr);
+    }
+    catch(error)
+    {
+        res.status(500,json({message:error}))
+    }
+})
 router.post("/add", async (req, res) => {
     const newProduct = new product(req.body);
   
