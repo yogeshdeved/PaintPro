@@ -8,6 +8,7 @@ const deviceRoute=require("./routes/device");
 const productTypeRoute=require("./routes/productType");
 const categoryRoute=require("./routes/category");
 const bannerRoute=require("./routes/banner");
+const productRoute=require("./routes/product");
 
 const mongoose=require("mongoose");
 const dburl=process.env.MONGO_URL
@@ -31,6 +32,8 @@ app.use("/api/v1/device",deviceRoute);
 app.use("/api/v1/producttype",productTypeRoute);
 app.use("/api/v1/category",categoryRoute);
 app.use("/api/v1/banner",bannerRoute);
+app.use("/api/v1/product",productRoute);
+
 
 app.listen(process.env.PORT || 5000,()=>{
     console.log("Backend is running");
