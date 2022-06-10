@@ -1,4 +1,4 @@
-const product = require("../models/products");
+const product = require("../models/product");
 const router=require("express").Router();
 
 router.get("/",async (req,res)=>{
@@ -13,7 +13,7 @@ router.get("/",async (req,res)=>{
     }
 })
 router.post("/add", async (req, res) => {
-    const newProduct = new category(req.body);
+    const newProduct = new product(req.body);
   
     try {
       const savedProduct = await newProduct.save();
