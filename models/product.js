@@ -22,6 +22,8 @@ const product=new mongoose.Schema({
         name:{type:String},
         url:{type:String}
     },
+    component:[{type:String, required:false}],
+    kit:[{type:String, required:false}],
     stock:{type:Number,required:true},
     hsn_code:{type:String},
 
