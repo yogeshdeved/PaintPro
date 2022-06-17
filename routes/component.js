@@ -1,4 +1,4 @@
-const component = require("../models/Component");
+const component = require("../models/component");
 const router=require("express").Router();
 
 router.get("/",async (req,res)=>{
