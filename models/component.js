@@ -3,7 +3,7 @@ const component=new mongoose.Schema({
     name : {type:String, required:true, unique:true},
     description : {type:String, required:false, unique:false},
     componenttype: {type:String, required:false,unique:false},
-    parent : {type:String, required:true, unique:false, default:''},
+    parent : {type:String, required:false, unique:false, default:''},
     status : {type:Boolean, required:true, default:false},
     rank_order : {type:Number, required:false},
     url : {type:String, required:false, unique:false},
