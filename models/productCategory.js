@@ -2,6 +2,7 @@ const mongoose=require("mongoose");
 const productCategory=new mongoose.Schema({
     name : {type:String, required:true, unique:true},
     description : {type:String, required:false, unique:false},
+    type: {type:string, required=true,unique:false},
     parent : {type:string, required:true, unique:false, default:''},
     status : {type:Boolean, required:true, default:false},
     rank_order : {type:Number, required:true},
