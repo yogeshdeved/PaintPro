@@ -1,5 +1,5 @@
 const mongoose=require("mongoose");
-const Kit=new mongoose.Schema({
+const kit=new mongoose.Schema({
     name : {type:String, required:true, unique:true},
     description : {type:String, required:false, unique:false},
     kittype: {type:String, required:false,unique:false},
@@ -12,4 +12,4 @@ const Kit=new mongoose.Schema({
     created_on : {type:String, required:true, default:Date.now},
     is_deleted : {type:Boolean, required:true, default:false}
 })
-module.exports=mongoose.model("Kit",Kit);
+module.exports=mongoose.model("Kit",kit);
