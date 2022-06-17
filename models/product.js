@@ -18,7 +18,6 @@ const product=new mongoose.Schema({
     rank_order : {type:Number, required:true},
     url : {type:String, required:true, unique:true},
     category:{
-        id:{type:String, required:true},
         name:{type:String},
         url:{type:String}
     },
