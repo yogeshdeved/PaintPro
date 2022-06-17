@@ -9,6 +9,8 @@ const productTypeRoute=require("./routes/productType");
 const categoryRoute=require("./routes/category");
 const bannerRoute=require("./routes/banner");
 const productRoute=require("./routes/product");
+const componentRoute = require("./routes/component");
+const kitRoute = required("./routes/kit");
 
 const mongoose=require("mongoose");
 const dburl=process.env.MONGO_URL
@@ -33,6 +35,8 @@ app.use("/api/v1/producttype",productTypeRoute);
 app.use("/api/v1/category",categoryRoute);
 app.use("/api/v1/banner",bannerRoute);
 app.use("/api/v1/product",productRoute);
+app.use("/api/v1/component",componentRoute);
+app.use("/api/v1/kit",kitRoute);
 
 
 app.listen(process.env.PORT || 5000,()=>{
