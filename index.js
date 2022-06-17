@@ -10,7 +10,7 @@ const categoryRoute=require("./routes/category");
 const bannerRoute=require("./routes/banner");
 const productRoute=require("./routes/product");
 const componentRoute = require("./routes/component");
-const kitRoute = required("./routes/kit");
+const kitRoute = require("./routes/kit");
 
 const mongoose=require("mongoose");
 const dburl=process.env.MONGO_URL
