@@ -12,10 +12,21 @@ router.get("/",async (req,res)=>{
         res.status(500,json({message:error}))
     }
 })
-router.get("/:pid",async (req,res)=>{
+router.get("/make/:pid",async (req,res)=>{
     try
     {
-    const dbr = await category.find({"ctype":req.params.pid});
+    const dbr = await category.find({"ctype": "Make", "parent":req.params.pid});
+    res.status(200).json(dbr);
+    }
+    catch(error)
+    {
+        res.status(500,json({message:error}))
+    }
+})
+router.get("/model/:pid",async (req,res)=>{
+    try
+    {
+    const dbr = await category.find({"ctype": "Model", "parent":req.params.pid});
     res.status(200).json(dbr);
     }
     catch(error)
