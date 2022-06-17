@@ -1,10 +1,10 @@
-const category = require("../models/productCategory");
+const component = require("../models/Component");
 const router=require("express").Router();
 
 router.get("/",async (req,res)=>{
     try
     {
-    const dbr = await category.find();
+    const dbr = await component.find();
     res.status(200).json(dbr);
     }
     catch(error)
@@ -13,7 +13,7 @@ router.get("/",async (req,res)=>{
     }
 })
 router.post("/add", async (req, res) => {
-    const newProduct = new category(req.body);
+    const newProduct = new component(req.body);
   
     try {
       const savedProduct = await newProduct.save();
