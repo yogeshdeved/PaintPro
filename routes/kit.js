@@ -1,4 +1,4 @@
-const kit = require("../models/Kit");
+const kit = require("../models/kit");
 const router=require("express").Router();
 
 router.get("/",async (req,res)=>{
