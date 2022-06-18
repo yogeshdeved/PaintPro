@@ -34,6 +34,17 @@ router.get("/model/:pid",async (req,res)=>{
         res.status(500,json({message:error}))
     }
 })
+router.get("/submodel/:pid",async (req,res)=>{
+    try
+    {
+    const dbr = await category.find({"ctype": "Sub Model", "parent":req.params.pid});
+    res.status(200).json(dbr);
+    }
+    catch(error)
+    {
+        res.status(500,json({message:error}))
+    }
+})
 router.get("/model/:pid",async (req,res)=>{
     try
     {
