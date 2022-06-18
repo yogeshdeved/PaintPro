@@ -4,7 +4,7 @@ const router=require("express").Router();
 router.get("/",async (req,res)=>{
     try
     {
-    const dbr = await category.find({"parent":"Category"});
+    const dbr = await category.find({"ctype":"Category", "parent":"root"});
     res.status(200).json(dbr);
     }
     catch(error)
