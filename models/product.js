@@ -19,6 +19,7 @@ const product=new mongoose.Schema({
     url : {type:String, required:true, unique:true},
     category:{
         name:{type:String},
+        ctype:{type:String},
         url:{type:String}
     },
     component:[{type:String, required:false}],
