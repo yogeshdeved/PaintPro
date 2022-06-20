@@ -14,6 +14,7 @@ const design=new mongoose.Schema({
 })
 const product=new mongoose.Schema({
     name : {type:String, required:true, unique:true},
+    sku: {type:String, required:true, unique:true},
     status : {type:Boolean, required:true, default:false},
     rank_order : {type:Number, required:true},
     url : {type:String, required:true, unique:true},
