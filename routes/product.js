@@ -12,10 +12,10 @@ router.get("/",async (req,res)=>{
         res.status(500,json({message:error}))
     }
 })
-router.get("/bycategoryid/:cid",async (req,res)=>{
+router.get("/cname/:cid",async (req,res)=>{
     try
     {
-    const dbr = await product.find({"category.id": req.params.cid});
+    const dbr = await product.find({"category.name": req.params.cid});
     res.status(200).json(dbr);
     }
     catch(error)
