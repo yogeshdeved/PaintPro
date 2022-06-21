@@ -21,6 +21,9 @@ const product=new mongoose.Schema({
     category:{
         name:{type:String},
         ctype:{type:String},
+        region:{type:String},
+        type:{type:String},
+        makeyear:{type:String},
         url:{type:String}
     },
     component:[{type:String, required:false}],
