@@ -12,6 +12,13 @@ const design=new mongoose.Schema({
     rank_order:{type:Number,required:true},
     status:{type:Boolean,required:true}
 })
+
+const component=new mongoose.Schema({
+    name : {type:String, required:true, unique:true},
+    description : {type:String, required:false, unique:false},
+    componenttype: {type:String, required:false,unique:false},
+    url : {type:String, required:false, unique:false},
+})
 const product=new mongoose.Schema({
     name : {type:String, required:true, unique:true},
     sku: {type:String, required:true, unique:true},
@@ -27,7 +34,7 @@ const product=new mongoose.Schema({
         url:{type:String}
     },
     component:[{type:String, required:false}],
-    kit:[{type:String, required:false}],
+    kit:[{{type:String, required:false}, type:component}],
     stock:{type:Number,required:true},
     hsn_code:{type:String},
 
