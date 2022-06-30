@@ -33,7 +33,6 @@ const product=new mongoose.Schema({
         makeyear:{type:String},
         url:{type:String}
     },
-    component:[{type:String, required:false}],
     kit:[{{type:String, required:false}, type:component}],
     stock:{type:Number,required:true},
     hsn_code:{type:String},
