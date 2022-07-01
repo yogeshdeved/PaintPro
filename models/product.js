@@ -39,7 +39,7 @@ const product=new mongoose.Schema({
 
     updated_on : {type:String, required:true, default:Date.now},
     created_on : {type:String, required:true, default:Date.now},
-    is_deleted : {type:Boolean, required:true},
+    is_deleted : {type:Boolean, required:false, default:false},
     //skins:[{type:design,name:{type:String,required:true},price:{type:Number,required:true}}],
     description:{type:String} //html
 })
