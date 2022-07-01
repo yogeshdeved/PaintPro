@@ -1,5 +1,5 @@
 const mongoose=require("mongoose");
-const kit=new mongoose.Schema({
+const kitold=new mongoose.Schema({
     name : {type:String, required:true, unique:true},
     description : {type:String, required:false, unique:false},
     kittype: {type:String, required:false,unique:false},
