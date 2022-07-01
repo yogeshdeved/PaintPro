@@ -13,12 +13,6 @@ const design=new mongoose.Schema({
     status:{type:Boolean,required:true}
 })
 
-const component=new mongoose.Schema({
-    name : {type:String, required:true, unique:true},
-    description : {type:String, required:false, unique:false},
-    componenttype: {type:String, required:false,unique:false},
-    url : {type:String, required:false, unique:false},
-})
 const product=new mongoose.Schema({
     name : {type:String, required:true, unique:true},
     sku: {type:String, required:true, unique:true},
@@ -33,14 +27,13 @@ const product=new mongoose.Schema({
         makeyear:{type:String},
         url:{type:String}
     },
-    kit:[{type:component, name:{type:String, required:false}}],
     stock:{type:Number,required:true},
     hsn_code:{type:String},
 
     updated_on : {type:String, required:true, default:Date.now},
     created_on : {type:String, required:true, default:Date.now},
     is_deleted : {type:Boolean, required:false, default:false},
-    //skins:[{type:design,name:{type:String,required:true},price:{type:Number,required:true}}],
+    skins:[{type:design,name:{type:String,required:true},price:{type:Number,required:true}}],
     description:{type:String} //html
 })
 module.exports=mongoose.model("Product",product);
