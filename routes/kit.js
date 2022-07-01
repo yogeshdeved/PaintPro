@@ -12,6 +12,28 @@ router.get("/",async (req,res)=>{
         res.status(500,json({message:error}))
     }
 })
+router.get("category/:cname",async (req,res)=>{
+    try
+    {
+    const dbr = await kit.find({"category.name":req.params.cname});
+    res.status(200).json(dbr);
+    }
+    catch(error)
+    {
+        res.status(500,json({message:error}))
+    }
+})
+router.get("kname/:kname",async (req,res)=>{
+    try
+    {
+    const dbr = await kit.find({"name":req.params.kname});
+    res.status(200).json(dbr);
+    }
+    catch(error)
+    {
+        res.status(500,json({message:error}))
+    }
+})
 router.post("/add", async (req, res) => {
     const newProduct = new kit(req.body);
   
