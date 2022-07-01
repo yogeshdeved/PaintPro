@@ -12,4 +12,4 @@ const kitold=new mongoose.Schema({
     created_on : {type:String, required:true, default:Date.now},
     is_deleted : {type:Boolean, required:true, default:false}
 })
-module.exports=mongoose.model("Kit",kit);
+module.exports=mongoose.model("Kitold",kitold);
