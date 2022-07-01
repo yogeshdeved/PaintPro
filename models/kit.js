@@ -1,10 +1,4 @@
 const mongoose=require("mongoose");
-const component=new mongoose.Schema({
-    name : {type:String, required:true, unique:true},
-    description : {type:String, required:false, unique:false},
-    componenttype: {type:String, required:false,unique:false},
-    url : {type:String, required:false, unique:false},
-})
 const kit=new mongoose.Schema({
     name : {type:String, required:true, unique:true},
     sku: {type:String, required:true, unique:true},
