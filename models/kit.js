@@ -13,12 +13,12 @@ const kit=new mongoose.Schema({
         makeyear:{type:String},
         url:{type:String}
     },
-    component:{
+    component:[{
         name : {type:String, required:true, unique:true},
         description : {type:String, required:false, unique:false},
         componenttype: {type:String, required:false,unique:false},
         url : {type:String, required:false, unique:false}
-    },
+    }],
     stock:{type:Number,required:true},
     updated_on : {type:String, required:true, default:Date.now},
     created_on : {type:String, required:true, default:Date.now},
