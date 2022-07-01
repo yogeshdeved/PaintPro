@@ -1,10 +1,10 @@
-const kit = require("../models/kitold");
+const kitold = require("../models/kitold");
 const router=require("express").Router();
 
 router.get("/",async (req,res)=>{
     try
     {
-    const dbr = await kit.find();
+    const dbr = await kitold.find();
     res.status(200).json(dbr);
     }
     catch(error)
@@ -13,7 +13,7 @@ router.get("/",async (req,res)=>{
     }
 })
 router.post("/add", async (req, res) => {
-    const newProduct = new kit(req.body);
+    const newProduct = new kitold(req.body);
   
     try {
       const savedProduct = await newProduct.save();
