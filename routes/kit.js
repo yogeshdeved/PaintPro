@@ -12,7 +12,7 @@ router.get("/",async (req,res)=>{
         res.status(500,json({message:error}))
     }
 })
-router.get("category/:cname",async (req,res)=>{
+router.get("/category/:cname",async (req,res)=>{
     try
     {
     const dbr = await kit.find({"category.name":req.params.cname});
@@ -23,7 +23,7 @@ router.get("category/:cname",async (req,res)=>{
         res.status(500,json({message:error}))
     }
 })
-router.get("kname/:kname",async (req,res)=>{
+router.get("/kname/:kname",async (req,res)=>{
     try
     {
     const dbr = await kit.find({"name":req.params.kname});
