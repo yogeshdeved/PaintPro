@@ -25,4 +25,4 @@ const kit=new mongoose.Schema({
     is_deleted : {type:Boolean, required:false, default:false},
     description:{type:String} //html
 })
-module.exports=mongoose.model("Product",product);
+module.exports=mongoose.model("Kit",kit);
