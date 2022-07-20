@@ -22,6 +22,7 @@ const kit=new mongoose.Schema({
         description : {type:String, required:false, unique:false},
         componenttype: {type:String, required:false,unique:false},
         url : {type:String, required:false, unique:false},
+        plt : {type:String, required:false, unique:false},
         dealer_price : {type:Number, required:false, unique:false},
         mrp : {type:Number, required:false, unique:false},
         selling_price : {type:Number, required:false, unique:false},
